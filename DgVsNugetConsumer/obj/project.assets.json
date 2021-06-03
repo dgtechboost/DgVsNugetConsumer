@@ -1,11 +1,36 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "DgLoggers/1.0.2-beta": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/DgLoggers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/DgLoggers.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "DgLoggers/1.0.2-beta": {
+      "sha512": "JefVcCncMpd7P0D53vl54VdD5o7BbNuGBfpvIHFt9dQbca3kSVpGgePdWzoTLCFurnvY+VcKZrA4ftcZpQKksQ==",
+      "type": "package",
+      "path": "dgloggers/1.0.2-beta",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dgloggers.1.0.2-beta.nupkg.sha512",
+        "dgloggers.nuspec",
+        "lib/netstandard2.0/DgLoggers.dll"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "DgLoggers >= 1.0.2-beta"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\dmitr\\.nuget\\packages\\": {},
@@ -53,6 +78,12 @@
     "frameworks": {
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
+        "dependencies": {
+          "DgLoggers": {
+            "target": "Package",
+            "version": "[1.0.2-beta, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
